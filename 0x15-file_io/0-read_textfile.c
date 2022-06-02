@@ -1,17 +1,16 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdlib.h>
-#include "holberton.h"
+#include <main.h>
 
 /**
- * read_textfile - function that reads a text file and prints it to the POSIX standard output.
+ * function that reads a text file and prints it to the POSIX standard output.
  *
- * @letters: the number of letters it could read and print.
- * @filename: name of the file.
- * Return: the actual number of letters it could read and print.
- */
-ssize_t read_textfile(const char *filename, size_t letters);
+ *@letters: number of letters it should read and print.
+ *@filename: name of the file.
+ *@Return: the actual
+ */ 
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, chars_read, chars_written;
 	char *buf;
