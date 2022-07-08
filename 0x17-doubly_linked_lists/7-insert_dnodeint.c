@@ -7,7 +7,8 @@
  *
  * Return: nth node. If node does not exist, returns NULL.
  */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
 
