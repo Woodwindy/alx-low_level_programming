@@ -1,14 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
-
 /**
- * get_nodeint_at_index - returns the nth node of a linked list
- * @head: head of a list.
- * @index: index of the node.
- *
- * Return: nth node. If node does not exist, returns NULL.
+ * *insert_dnodeint_at_index - inserts new node at given position.
+ * @h: pointer to first element.
+ * @idx: index where new node should be added.
+ * @n: data to be added.
+ * Return: address of new node or NULL if it failed.
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+
 {
 	unsigned int i;
 
