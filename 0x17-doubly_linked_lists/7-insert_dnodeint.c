@@ -1,40 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
+
 /**
- * *insert_dnodeint_at_index - inserts new node at given position.
- * @h: pointer to first element.
- * @idx: index where new node should be added.
- * @n: data to be added.
- * Return: address of new node or NULL if it failed.
+ * get_nodeint_at_index - returns the nth node of a linked list
+ * @head: head of a list.
+ * @index: index of the node.
+ *
+ * Return: nth node. If node does not exist, returns NULL.
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	dlistint_t *newnode, *temp;
-	unsigned int counter;
+	unsigned int i;
 
-	newnode = malloc(sizeof(dlistint_t));
-	if (newnode == NULL)
-		return (NULL);
-	newnode->n = n;
-	newnode->next = NULL;
-	newnode->prev = NULL;
-	if (idx == 0)
+	for (i = 0; i < index && head != NULL; i++)
 	{
-		*h = newnode;
-		return (newnode);
+		head = head->next;
 	}
-	temp = *h;
-	for (counter = 0; counter < idx - 1; counter++)
-	{
-		temp = temp->next;
-		if (temp == NULL)
-			return (NULL);
-	}
-	newnode->next = temp->next;
-	temp->next->prev = newnode;
-	temp->next = newnode;
-	newnode->prev = temp;
 
-	return (newnode);
+	return (head);
 }
