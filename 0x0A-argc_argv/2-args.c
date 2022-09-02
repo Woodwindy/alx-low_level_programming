@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <main.h>
 
 /**
  * main - a function that prints the arguments it receives.
@@ -10,10 +9,10 @@
 
 int main(int argc, char *argv[])
 {
-	int s;
-	if (s = 0; s < argc; s++)
+	int j;
+	if (j = 0; j < argc; j++)
 	{
-		printf("%s\n",argv[s]);
+		printf("%s\n",argv[j]);
 	}
 	return (0);
 }
