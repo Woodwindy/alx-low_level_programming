@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 /** 
- * This program prints its name followed  by a new line
  * main - prints its name, followed by a  new line
  * @argc: argument counter.
  * @argv: argument vector
