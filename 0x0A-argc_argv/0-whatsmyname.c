@@ -6,7 +6,7 @@
  * @argc: argument counter.
  * @argv: argument vector.
  * Return: zero.
- **/
+ */
 
 int main(int argc, char *argv[])
 {
